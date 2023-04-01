@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL CLOCK</title>
+    <style>
+        .div1{
+            margin-top:2%;
+            margin-left:40%;
+            font-size:100px;
+            font-weight:600px;
+            color: blue;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class=div1 id= clock >
+    </div>
+    <script>
+        function clock()
+        {
+        d=new Date();
+        hr=d.getHours();
+        mm=d.getMinutes();
+        ss=d.getSeconds();
+        if(mm<10)
+         cTime=hr+":0"+mm+":"+ss;
+        else    
+         cTime=hr+":"+mm+":"+ss;
+        x=document.getElementById('clock');
+        x.innerHTML=cTime;
+        }
+        setInterval(clock,1000);
+    </script>
+</body>
+</html>

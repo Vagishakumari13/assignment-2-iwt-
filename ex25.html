@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <caption> REGISTERATION <FORM></FORM></caption>
+        <form method=post onsubmit='return validate()'></form>
+            <tr>
+                <td> <label> UserId</label>  </td>
+                <td> <input type="text" placeholder="UserId"/> </td>
+            </tr>
+            <tr>
+                <td> <label> Password</label>  </td>
+                <td> <input type="Password" placeholder="Password"/> </td>
+            </tr>
+            <tr>
+                <td> <label>Confirm Password</label>  </td>
+                <td> <input type="text" placeholder="Confirm Password"/> </td>
+            </tr>
+            <tr>
+						<button type=submit>Submit</button>
+					</td>
+				</tr>
+
+        </form>
+    </table>
+    <script>
+        function validate(){
+            Usname=document.forms[0].element[0].value;
+            Passname=document.forms[0].element[1].value;
+            Confpass=document.forms[0].element[2].value;
+            RegExpUsname=/^[a-zA-Z]{5}[0-9]{5}$/
+            RegExpPassname=/^(?=.*[0-9])(?=.*[a-z])(?=.*[A_Z])(?=.*[@#$%^&*(){}:;""<>?]).{8,16}$/
+            if(RegExpUsname.test(Usname)==false){
+                alert("enter valid user id")
+            }
+            else if(RegExpPassname.test(Passname==false)){
+                alert("enter valid password")
+            }
+            else if(Passname!==Confpass){
+                alert("password do not match")
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

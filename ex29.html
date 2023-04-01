@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            p{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+               
+            }
+            body{
+                background-color:  #a90966;
+            }
+        </style>
+        </head>  
+        <body>
+            <p id="txt">
+
+            </p>
+            <script>
+                var tt=setInterval(ichange,1000);
+                var t=document.getElementById("txt");
+                var fs=5;
+                function ichange(){
+                    t.innerHTML="Text-Growing";
+                    t.style.color="red";
+                    t.style.fontSize=fs;
+                    fs=fs+5;
+                        
+                    
+                if(fs>=50){
+                    clearInterval(tt);
+                    var t2=setInterval(dchange,1000);
+                }
+                }
+                function dchange() {
+                    
+                    
+                        fs=fs-5;
+                        t.innerHTML="Text-Shrinking";
+                        t.style.color="blue";
+                        t.style.fontSize=fs;
+                    
+                    if(fs==5){
+                        clearInterval(tt);
+                        
+                    }
+
+                }
+            </script>
+        </body>
+    </head>
+</html>

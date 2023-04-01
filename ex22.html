@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CHESS </title>
+        <style>
+            .container{
+                display: flex;
+            }
+            .inner1{
+                background-color: black;
+                height:100px;
+                width:100px;
+            }
+            .inner2{
+                background-color: white;
+                height:100px;
+                width:100px;
+            }
+            .inner1:hover,.inner2:hover{
+                background-color:red;
+            }
+
+        </style>
+        
+    </head>
+    <body>
+       
+            <script type="text/javascript">
+                row=prompt("enter the number of rows");
+                column=prompt("enter the number of columns");
+                for(i=1;i<row;i++)
+                {
+                    document.write("<div class=container>");
+                    for(j=1;j<=column;j++)
+                    {
+                    if((i+j)%2==0)
+                           document.write("<div class=inner1> </div>");
+                           else
+                           document.write("<div class=inner2> </div>");
+                    }
+                           document.write("</div>");
+                }
+            </script>
+        
+    </body>
+</html>
